@@ -6,4 +6,5 @@ export const ContainerPanel = styled.div`
   align-items: center;
   margin: 3rem auto auto;
   width: 75vw;
+  color: red;
 `;

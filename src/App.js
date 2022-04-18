@@ -1,14 +1,17 @@
-import React from 'react';
-import './App.css';
-import Details from './pages/details';
+import React from "react";
+
+import { Routes, Route } from "react-router-dom";
+
+import Details from "./pages/details";
+import Main from "./pages/main";
 
 const App = () => {
-
   return (
-    <>
-      <Details />
-    </>
+      <Routes>
+        <Route path="/details" element={<Details />} />
+        <Route path="/" element={<Main />} />
+      </Routes>
   );
-}
+};
 
 export default App;

@@ -5,7 +5,7 @@ const Details = () => {
   return (
     <div>
       <ContainerPanel>
-        <p>Teste</p>
+        <p>Teste Detail</p>
       </ContainerPanel>
     </div>
   )

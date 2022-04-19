@@ -1,5 +1,7 @@
 import express from "express";
+import cors from "cors";
 import fs from "fs";
+
 import path from "path";
 
 import React from "react";
@@ -13,6 +15,9 @@ import App from "../src/App";
 import Details from "../src/pages/details";
 
 const app = express();
+
+app.use(cors());
+app.use(express.static(path.resolve(__dirname, "..", "build")));
 
 app.use("^/$", (req, res, next) => {
   fs.readFile(path.resolve("./build/index.html"), "utf-8", (err, data) => {
@@ -32,6 +37,7 @@ app.use("^/$", (req, res, next) => {
     );
   });
 });
+
 app.use("/details", (req, res, next) => {
   fs.readFile(path.resolve("./build/index.html"), "utf-8", (err, data) => {
     if (err) {
@@ -51,11 +57,9 @@ app.use("/details", (req, res, next) => {
   });
 });
 
-app.use(express.static(path.resolve(__dirname, "..", "build")));
 
 app.post("/filmes/:filme", function (req, res) {
   const { filme } = req.params;
-  console.log(filme);
   axios.get(`${BASE_URL}?apikey=${KEY}&t=${filme}`).then((response) => {
     res.send(response.data);
   });

@@ -38,7 +38,6 @@ and
 ------------
 
 
-
 With the applications running, you can access and test:
 
 
@@ -49,6 +48,8 @@ http://localhost:3030
 The Side Rendering Client at:
 http://localhost:3000
 
+
+------------
 
 
 Thanks for the visit,

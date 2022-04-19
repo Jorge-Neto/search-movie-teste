@@ -26,7 +26,7 @@ And then:
 
 and
 
-`yarn start` or npm `run start` to upload the app-client
+`yarn start` or `npm run start` to upload the app-client
 
 
 
@@ -38,6 +38,7 @@ and
 ------------
 
 
+
 With the applications running, you can access and test:
 
 
@@ -47,6 +48,7 @@ http://localhost:3030
 
 The Side Rendering Client at:
 http://localhost:3000
+
 
 
 Thanks for the visit,

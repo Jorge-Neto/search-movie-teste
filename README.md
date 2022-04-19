@@ -1,6 +1,8 @@
 # Search Movie - SSR and CSR with React
 
 **Author:** Jorge de Oliveira Neto
+
+
 **External API:** OMDb API
 
 
@@ -45,6 +47,7 @@ http://localhost:3030
 
 The Side Rendering Client at:
 http://localhost:3000
+
 
 Thanks for the visit,
 

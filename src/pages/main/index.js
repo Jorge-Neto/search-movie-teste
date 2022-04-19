@@ -2,9 +2,9 @@ import React, { useState } from "react";
 
 import Listing from "../../components/listing";
 
-import { BASE_URL} from "../../components/api/requests";
+import { BASE_URL } from "../../components/api/requests";
 
-import { ContainerPanel, ResultsList } from "./styles";
+import { ContainerPanel, ResultsList, FormTitle, FormSubtitle } from "./styles";
 import axios from 'axios';
 
 export default function Main() {
@@ -19,10 +19,9 @@ export default function Main() {
         e.preventDefault();
         setSearch("");
         axios.post(`${BASE_URL}filmes/${search}`)
-        .then(res => {
-                console.log(res);
+            .then(res => {
+                sessionStorage.setItem('filme', JSON.stringify(res.data));
                 setSearchItem(res.data);
-                localStorage.setItem('filme', searchItem);
             }).catch(function (error) {
                 console.log(error);
             })
@@ -31,11 +30,11 @@ export default function Main() {
     return (
         <div>
             <ContainerPanel>
-                <h1>Welcome!</h1>
-                <h2>Search for a movie here</h2>
+                <FormTitle>Welcome!</FormTitle>
+                <FormSubtitle>Search for a movie here</FormSubtitle>
                 <form onSubmit={searchMovie}>
-                    <input type="text" value={search} onChange={handleChange} />
-                    <input type="submit" value="Search" />
+                    <input className="searchInput" type="text" value={search} placeholder="Type here..." onChange={handleChange} />
+                    <input className="searchButton" type="submit" value="Search" />
                 </form>
 
                 <ResultsList>

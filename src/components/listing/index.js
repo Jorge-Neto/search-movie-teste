@@ -5,7 +5,6 @@ export default function Listing({ itemToShow }) {
   const [movie, setMovie] = useState([itemToShow.data]);
 
   useEffect(() => {
-    console.log(movie, itemToShow);
     setMovie(itemToShow);
   }, [itemToShow]);
 
@@ -15,12 +14,12 @@ export default function Listing({ itemToShow }) {
         <MovieCard>
           <MovieImage src={movie ? movie.Poster : ''} />
           <MovieInfo key={movie ? movie.Id : ''}>
-            <li>{movie ? movie.Title : ''}</li>
-            <li>{movie ? movie.Year : ''}</li>
-            <li>{movie ? movie.Genre : ''}</li>
+            <li className="title">{movie ? movie.Title : ''}</li>
+            <li>{movie ? movie.Released : ''} - {movie ? movie.Genre : ''}</li>
+            <li>{movie ? movie.Actors : ''}</li>
             <BtnSeeMore to='/details'>
               Details
-              </BtnSeeMore>
+            </BtnSeeMore>
           </MovieInfo>
         </MovieCard>
       )}

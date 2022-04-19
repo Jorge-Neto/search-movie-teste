@@ -38,7 +38,7 @@ const Details = () => {
                   })}
                 </RatingLists>
                 <BtnSeeMore to='/'>
-                  Back
+                  Go Back
                 </BtnSeeMore>
               </MovieInfo>
             </MovieCard>

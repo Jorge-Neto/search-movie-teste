@@ -37,4 +37,12 @@ export const FormTitle = styled.h1`
 export const FormSubtitle = styled.h2`
   padding-bottom: 0.5rem;
   color: darkolivegreen;
+  @media (max-width: 1023px) {
+    padding-bottom: 0;
+  }
+  @media (max-width: 425px) {
+    text-align: center;
+    font-size: 20px;
+    padding: 0.65rem 0;
+  }
 `;

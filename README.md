@@ -10,7 +10,7 @@
 
 ## First steps:
 
-When downloading, run:
+After running the `git clone` command on your machine, run:
 
 `yarn` or `npm i` to install the packages
 
